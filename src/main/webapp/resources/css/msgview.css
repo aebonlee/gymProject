@@ -1,0 +1,23 @@
+@charset "UTF-8";
+.view{
+  background-color: #d5678c;
+  height: 35px;
+  display: flex;
+  align-items: center;  
+  padding-left: 20px; 
+  border-bottom: 2px solid #333;
+  box-sizing: border-box;
+  
+}
+.msgcontents{
+  margin-top: 20px;
+  margin: 15px auto;
+  padding-bottom: 5px;
+}
+.btn_answer,
+.btn_delete{
+  margin: 0 10px;
+}
+.btn_back{
+	margin: 0 10px;
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gym.mappers.reservation">
+	<select id="getList" resultType="com.gym.domain.ReservationVO" parameterType="string">
+		select * from admin_reservation where rv_date = #{rv_date} order by rv_time
+	</select>
+	<insert id="addRV">
+		insert into reservation(rv_num,userid) values (#{rv_num},#{userid})
+	</insert>
+	<update id="plusRV">
+		update admin_reservation set rv_headCnt = rv_headCnt + 1 where rv_num = #{rv_num}
+	</update>
+	<update id="minusRV">
+		update admin_reservation set rv_headCnt = rv_headCnt - 1 where rv_num = #{rv_num}
+	</update>
+	<select id="findOverlap" resultType="int">
+		select count(*) from reservation where rv_num = #{rv_num} and userid=#{userid}
+	</select>
+	<insert id="insertReservation">
+		insert into admin_reservation(rv_date,rv_time,rv_title,rv_limit) 
+		values (#{rv_date},#{rv_time},#{rv_title},#{rv_limit})
+	</insert>
+	<select id="selectReservation" resultType="com.gym.domain.ReservationVO">
+		select * from admin_reservation 
+		where rv_date = #{rv_date} and rv_time = #{rv_time} and rv_title = #{rv_title}
+	</select>
+	<delete id="cancelReservation">
+		delete from reservation where rv_num = #{rv_num}
+	</delete>
+	<delete id="deleteReservation">
+		delete from admin_reservation where rv_num = #{rv_num}
+	</delete>
+</mapper>

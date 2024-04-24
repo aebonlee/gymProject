@@ -1,0 +1,113 @@
+	#main_box{
+		width: 100%;
+	}
+	#head_title{
+		position: absolute;
+        top: 105px;
+        right: 614px;
+        font-weight:700;
+        font-size: 45px;
+	}
+    .big-box {
+        padding: 0 150px;
+        width: 1440px;
+        height: 100%;
+        margin: 0 auto;
+        min-height: 888px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        /* border: 1px solid black; */
+        
+    }
+    .box{
+	width: 290px;
+    height: 395px;
+    display: inline-block;
+    box-shadow: 10px 10px 30px 10px gainsboro;
+    font-size: 19px;
+    text-align: center;
+    padding-top: 15px;
+    cursor:pointer;
+    position:relative;
+    }
+    .box:hover {
+  	 transform: scale(1.2);
+  	 overflow: hidden;
+ 	 transition: all 0.3s;
+	}
+	.silver_box:hover {
+		background-color: #D0DBDD;
+	  	text-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3),
+              		-1px 10px 12px rgba(0, 0, 0, 0.3);
+	}
+	.gold_box:hover {
+		background-color: #F9C738;
+		text-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3),
+              		-1px 10px 12px rgba(0, 0, 0, 0.3);
+	}
+	.bronze_box:hover {
+		background-color: #EF8049;
+		text-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3),
+              		-1px 10px 12px rgba(0, 0, 0, 0.3);
+	}
+	.box:hover .box-main,
+	.box:hover .box-price span,
+	.box:hover .box-term {
+		opacity: 0.1;
+	}
+	#hidden_btn {
+		position: absolute;
+		top:163px;
+		right:89px;
+		font-size: 30px;
+		font-weight: 700;
+		display: none;
+	}
+	.box:hover #hidden_btn {
+		display: block;
+		opacity: 1.0 !important;
+	}
+	/* .box:hover * {
+		opacity: 0.8;
+  background-color: #bbb;
+	} */
+    
+    .left-main{
+        background: url("./payimg/silver.png") no-repeat;
+        /*background-color: silver;  */
+    }
+    .mid-main{
+        background: url("./payimg/gold.png") no-repeat;
+    }
+    .right-main{
+        background: url("./payimg/bronze.png") no-repeat;
+    }
+    .box-main{
+	margin: 6px auto 0px;
+    width: 204px;
+    height: 282.39px;
+    /* border: 1px solid blue; */
+    background-size: contain;
+    }
+    .box-price{
+    	margin-top:10px;
+    }
+    .box-price span:nth-child(2) {
+        text-decoration: line-through;
+        color: gray;
+    }
+    .box-price span:last-child{
+        text-decoration: none !important;
+        font-weight: 700;
+        font-size: 23px !important; 
+    }
+     .box-term{
+     	text-align: center;
+     	font-weight: 700;
+     	font-size: 25px;
+     	margin-top:15px;
+    }
+    
+    
